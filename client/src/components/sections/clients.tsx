@@ -8,6 +8,7 @@ export default function ClientsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4 section-heading" data-testid="text-clients-title">
+            <span className="shape"></span>
             Trusted by Leading Companies
           </h2>
           <p className="text-secondary" data-testid="text-clients-subtitle">

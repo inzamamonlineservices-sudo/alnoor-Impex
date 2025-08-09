@@ -143,6 +143,18 @@
     display: inline-block;
   }
   
+  .section-heading .shape {
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(203.7736, 87.6033%, 52.5490%) 100%);
+    border-radius: 50% 50% 0 50%;
+    opacity: 0.15;
+    z-index: -1;
+  }
+  
   .section-heading::after {
     content: '';
     position: absolute;

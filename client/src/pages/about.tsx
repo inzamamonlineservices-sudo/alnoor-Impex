@@ -163,40 +163,62 @@ export default function About() {
         </section>
 
         {/* Quality Policy */}
-        <section className="py-20 bg-gradient-to-br from-accent via-primary to-secondary relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-11 9-20 20-20s20 9 20 20-9 20-20 20-20-9-20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+        <section className="py-20 bg-gradient-to-br from-primary via-accent to-primary relative overflow-hidden">
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 animate-pulse" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M40 40c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20zm20 0c0 11-9 20-20 20s-20-9-20-20 9-20 20-20 20 9 20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}></div>
           </div>
           
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 className="text-3xl font-bold text-white mb-8 section-heading section-heading-white" data-testid="text-quality-title">
-              Quality Policy
-            </h2>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 shadow-2xl border border-white/20">
-              <div className="max-w-3xl mx-auto">
-                <div className="text-6xl text-white/20 mb-6">"</div>
-                <p className="text-white leading-relaxed text-xl font-light" data-testid="text-quality-content">
-                  We are committed to delivering textile products that exceed international quality standards. Our quality assurance process encompasses every stage from raw material sourcing to final delivery, ensuring our clients receive products that meet their exact specifications and exceed their expectations.
-                </p>
-                <div className="flex justify-end text-6xl text-white/20 mt-6">"</div>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-8 section-heading section-heading-white" data-testid="text-quality-title">
+                <span className="shape" style={{background: 'rgba(255,255,255,0.3)'}}></span>
+                Quality Policy
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Policy Statement */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-white/20 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <div className="text-8xl text-white/20 mb-6 leading-none">"</div>
+                  <p className="text-white leading-relaxed text-lg font-light mb-6" data-testid="text-quality-content">
+                    We are committed to delivering textile products that exceed international quality standards. Our quality assurance process encompasses every stage from raw material sourcing to final delivery, ensuring our clients receive products that meet their exact specifications and exceed their expectations.
+                  </p>
+                  <div className="flex justify-end text-8xl text-white/20 -mt-4 leading-none">"</div>
+                </div>
               </div>
               
-              {/* Quality Standards Icons */}
-              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20">
-                <div className="text-center">
-                  <CheckCircle className="w-12 h-12 text-white mx-auto mb-2" />
-                  <p className="text-white/80 text-sm font-medium">ISO Certified</p>
+              {/* Quality Standards Grid */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 flex items-center hover:bg-white/15 transition-all duration-300">
+                  <CheckCircle className="w-16 h-16 text-white mr-6 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">ISO Certified Operations</h3>
+                    <p className="text-white/80 text-sm">All our processes follow ISO 9001:2015 quality management standards</p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <Award className="w-12 h-12 text-white mx-auto mb-2" />
-                  <p className="text-white/80 text-sm font-medium">Quality Assured</p>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 flex items-center hover:bg-white/15 transition-all duration-300">
+                  <Award className="w-16 h-16 text-white mr-6 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Quality Assurance</h3>
+                    <p className="text-white/80 text-sm">Multi-stage testing and inspection throughout the production cycle</p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <Globe className="w-12 h-12 text-white mx-auto mb-2" />
-                  <p className="text-white/80 text-sm font-medium">Global Standards</p>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 flex items-center hover:bg-white/15 transition-all duration-300">
+                  <Globe className="w-16 h-16 text-white mr-6 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Global Standards</h3>
+                    <p className="text-white/80 text-sm">Compliance with international textile quality and safety regulations</p>
+                  </div>
                 </div>
               </div>
             </div>

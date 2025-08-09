@@ -1,6 +1,28 @@
 import { Search, Users, Factory, CheckCircle, Truck, Headphones, ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function ProcessSection() {
+  const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const stepIndex = parseInt(entry.target.getAttribute('data-step') || '0');
+            setVisibleSteps(prev => [...new Set([...prev, stepIndex])]);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const stepElements = document.querySelectorAll('.process-step');
+    stepElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const processSteps = [
     {
       step: "01",
@@ -52,6 +74,7 @@ export default function ProcessSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 section-heading section-heading-white" data-testid="text-process-title">
+            <span className="shape" style={{background: 'rgba(255,255,255,0.3)'}}></span>
             Our Process
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="text-process-description">
@@ -69,9 +92,19 @@ export default function ProcessSection() {
             const isEven = index % 2 === 0;
             
             return (
-              <div key={step.step} className="relative mb-12 lg:mb-16">
+              <div 
+                key={step.step} 
+                className={`process-step relative mb-12 lg:mb-16 transition-all duration-700 ${
+                  visibleSteps.includes(index) 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+                data-step={index}
+              >
                 {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full shadow-2xl flex items-center justify-center z-20 hidden lg:flex">
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full shadow-2xl flex items-center justify-center z-20 hidden lg:flex transition-all duration-500 ${
+                  visibleSteps.includes(index) ? 'scale-100' : 'scale-75'
+                }`}>
                   <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
@@ -79,7 +112,9 @@ export default function ProcessSection() {
                 
                 {/* Content Card */}
                 <div className={`lg:w-5/12 ${isEven ? 'lg:mr-auto lg:pr-16' : 'lg:ml-auto lg:pl-16'}`}>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-500 ${
+                    visibleSteps.includes(index) ? 'transform-none' : isEven ? 'transform -translate-x-8' : 'transform translate-x-8'
+                  }`}>
                     {/* Mobile Icon */}
                     <div className="lg:hidden flex items-center mb-6">
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">

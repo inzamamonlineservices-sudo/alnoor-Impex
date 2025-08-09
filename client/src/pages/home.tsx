@@ -18,9 +18,9 @@ export default function Home() {
         <MissionValuesSection />
         <StorySection />
         <ServicesSection />
-        <ProcessSection />
         <ProductsSection />
         <ClientsSection />
+        <ProcessSection />
         <NewsletterSection />
       </main>
       <Footer />
