@@ -15,19 +15,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <MissionValuesSection />
-        
-        {/* Mission Statement */}
-        <section className="py-16 bg-neutral">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8" data-testid="text-mission-title">
-              Our Mission
-            </h2>
-            <p className="text-lg text-secondary leading-relaxed" data-testid="text-mission-statement">
-              With three decades of industry presence, we've forged strong bonds with suppliers and customers, enabling us to expand into new markets and earn trust globally.
-            </p>
-          </div>
-        </section>
-
         <StorySection />
         <ServicesSection />
         <ProductsSection />
