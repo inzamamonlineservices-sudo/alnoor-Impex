@@ -149,10 +149,24 @@
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(var(--teal)) 100%);
-    border-radius: 2px;
+    background: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(203.7736, 87.6033%, 52.5490%) 50%, hsl(var(--accent)) 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  }
+  
+  .section-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--accent), 0.1) 20%, hsl(203.7736, 87.6033%, 52.5490%, 0.2) 50%, hsl(var(--accent), 0.1) 80%, transparent 100%);
+    border-radius: 12px;
+    z-index: -1;
   }
   
   .section-heading-white::after {
@@ -161,9 +175,44 @@
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
-    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.9) 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  .section-heading-white::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 80%, transparent 100%);
+    border-radius: 12px;
+    z-index: -1;
+  }
+  
+  /* Windowed scrolling */
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Main sections for windowed scrolling */
+  main > section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Hero section specific styling */
+  .hero-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
   }
 }
