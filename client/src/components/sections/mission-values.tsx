@@ -1,6 +1,24 @@
-import { Handshake, Shield, Lightbulb, Leaf } from "lucide-react";
+import { useState } from "react";
+import { Handshake, Shield, Lightbulb, Leaf, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function MissionValuesSection() {
+  const [expandedCards, setExpandedCards] = useState<{ [key: number]: boolean }>({});
+
+  const toggleCard = (index: number) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const truncateText = (text: string, maxLines: number = 5) => {
+    const words = text.split(' ');
+    const wordsPerLine = 8; // Approximate words per line
+    const maxWords = maxLines * wordsPerLine;
+    if (words.length <= maxWords) return text;
+    return words.slice(0, maxWords).join(' ') + '...';
+  };
+
   const values = [
     {
       icon: Handshake,
@@ -46,9 +64,24 @@ export default function MissionValuesSection() {
                 <h3 className="text-xl font-semibold text-primary mb-4" data-testid={`text-value-title-${index}`}>
                   {value.title}
                 </h3>
-                <p className="text-secondary leading-relaxed" data-testid={`text-value-description-${index}`}>
-                  {value.description}
+                <p className="text-secondary leading-relaxed mb-4" data-testid={`text-value-description-${index}`}>
+                  {expandedCards[index] ? value.description : truncateText(value.description)}
                 </p>
+                <button
+                  onClick={() => toggleCard(index)}
+                  className="flex items-center text-accent font-medium hover:text-blue-600 transition-colors duration-200"
+                  data-testid={`button-toggle-${index}`}
+                >
+                  {expandedCards[index] ? (
+                    <>
+                      Read Less <ChevronUp className="w-4 h-4 ml-1" />
+                    </>
+                  ) : (
+                    <>
+                      Read More <ChevronDown className="w-4 h-4 ml-1" />
+                    </>
+                  )}
+                </button>
               </div>
             );
           })}

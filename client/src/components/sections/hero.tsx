@@ -5,26 +5,51 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
   const texts = ["Connecting Markets", "Delivering Quality", "Building Trust"];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prev) => (prev + 1) % texts.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+    const currentFullText = texts[currentTextIndex];
+    
+    if (isTyping) {
+      const typingTimer = setTimeout(() => {
+        if (displayText.length < currentFullText.length) {
+          setDisplayText(currentFullText.slice(0, displayText.length + 1));
+        } else {
+          setIsTyping(false);
+          setTimeout(() => {
+            setIsTyping(true);
+            setDisplayText("");
+            setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+          }, 2000);
+        }
+      }, 100);
+      
+      return () => clearTimeout(typingTimer);
+    }
+  }, [currentTextIndex, displayText, isTyping, texts]);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
-          alt="Modern textile manufacturing facility"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-          data-testid="img-hero-background"
-        />
+          data-testid="video-hero-background"
+        >
+          <source src="https://videos.pexels.com/video-files/3194543/3194543-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          {/* Fallback image */}
+          <img
+            src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
+            alt="Modern textile manufacturing facility"
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 hero-video-overlay"></div>
       </div>
       
@@ -38,7 +63,8 @@ export default function HeroSection() {
             className="transition-opacity duration-300"
             data-testid="text-hero-rotating"
           >
-            {texts[currentTextIndex]}
+            {displayText}
+            <span className="animate-pulse">|</span>
           </span>
         </div>
         <p className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" data-testid="text-hero-description">
@@ -51,7 +77,7 @@ export default function HeroSection() {
             </Button>
           </Link>
           <Link href="/contact" data-testid="button-hero-contact">
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-3 text-lg">
               Get In Touch
             </Button>
           </Link>

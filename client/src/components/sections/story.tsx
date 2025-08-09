@@ -15,7 +15,7 @@ export default function StorySection() {
           
           {/* Story Content */}
           <div className="lg:order-1">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6" data-testid="text-story-title">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6 section-heading" data-testid="text-story-title">
               Our Story
             </h2>
             <div className="space-y-4 text-secondary leading-relaxed">
