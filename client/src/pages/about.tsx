@@ -74,7 +74,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-primary mb-6" data-testid="text-overview-title">
+                <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-overview-title">
                   Three Decades of Excellence
                 </h2>
                 <div className="space-y-4 text-secondary leading-relaxed">
@@ -105,7 +105,7 @@ export default function About() {
         <section className="py-20 bg-neutral">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-strengths-title">
+              <h2 className="text-3xl font-bold text-primary mb-4 section-heading" data-testid="text-strengths-title">
                 Our Core Strengths
               </h2>
               <p className="text-lg text-secondary max-w-3xl mx-auto" data-testid="text-strengths-description">
@@ -143,7 +143,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="text-center">
-                <h2 className="text-3xl font-bold text-primary mb-6" data-testid="text-mission-title">
+                <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-mission-title">
                   Our Mission
                 </h2>
                 <p className="text-secondary leading-relaxed" data-testid="text-mission-content">
@@ -151,7 +151,7 @@ export default function About() {
                 </p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl font-bold text-primary mb-6" data-testid="text-vision-title">
+                <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-vision-title">
                   Our Vision
                 </h2>
                 <p className="text-secondary leading-relaxed" data-testid="text-vision-content">
@@ -163,15 +163,42 @@ export default function About() {
         </section>
 
         {/* Quality Policy */}
-        <section className="py-20 bg-neutral">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-primary mb-8" data-testid="text-quality-title">
+        <section className="py-20 bg-gradient-to-br from-accent via-primary to-secondary relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-11 9-20 20-20s20 9 20 20-9 20-20 20-20-9-20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+            }}></div>
+          </div>
+          
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 className="text-3xl font-bold text-white mb-8 section-heading section-heading-white" data-testid="text-quality-title">
               Quality Policy
             </h2>
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <p className="text-secondary leading-relaxed text-lg" data-testid="text-quality-content">
-                "We are committed to delivering textile products that exceed international quality standards. Our quality assurance process encompasses every stage from raw material sourcing to final delivery, ensuring our clients receive products that meet their exact specifications and exceed their expectations."
-              </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 shadow-2xl border border-white/20">
+              <div className="max-w-3xl mx-auto">
+                <div className="text-6xl text-white/20 mb-6">"</div>
+                <p className="text-white leading-relaxed text-xl font-light" data-testid="text-quality-content">
+                  We are committed to delivering textile products that exceed international quality standards. Our quality assurance process encompasses every stage from raw material sourcing to final delivery, ensuring our clients receive products that meet their exact specifications and exceed their expectations.
+                </p>
+                <div className="flex justify-end text-6xl text-white/20 mt-6">"</div>
+              </div>
+              
+              {/* Quality Standards Icons */}
+              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20">
+                <div className="text-center">
+                  <CheckCircle className="w-12 h-12 text-white mx-auto mb-2" />
+                  <p className="text-white/80 text-sm font-medium">ISO Certified</p>
+                </div>
+                <div className="text-center">
+                  <Award className="w-12 h-12 text-white mx-auto mb-2" />
+                  <p className="text-white/80 text-sm font-medium">Quality Assured</p>
+                </div>
+                <div className="text-center">
+                  <Globe className="w-12 h-12 text-white mx-auto mb-2" />
+                  <p className="text-white/80 text-sm font-medium">Global Standards</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -180,7 +207,7 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-team-title">
+              <h2 className="text-3xl font-bold text-primary mb-4 section-heading" data-testid="text-team-title">
                 Meet Our Team
               </h2>
               <p className="text-lg text-secondary" data-testid="text-team-description">

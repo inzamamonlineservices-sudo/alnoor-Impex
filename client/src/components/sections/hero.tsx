@@ -31,7 +31,7 @@ export default function HeroSection() {
   }, [currentTextIndex, displayText, isTyping, texts]);
 
   return (
-    <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -42,7 +42,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
           data-testid="video-hero-background"
         >
-          <source src="https://videos.pexels.com/video-files/4555421/4555421-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4" />
           {/* Fallback image */}
           <img
             src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"

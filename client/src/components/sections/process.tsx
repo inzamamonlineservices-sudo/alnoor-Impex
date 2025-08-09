@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Users, Factory, CheckCircle, Truck, Headphones } from "lucide-react";
+import { Search, Users, Factory, CheckCircle, Truck, Headphones, ArrowDown } from "lucide-react";
 
 export default function ProcessSection() {
   const processSteps = [
@@ -41,69 +41,81 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 section-heading" data-testid="text-process-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 section-heading section-heading-white" data-testid="text-process-title">
             Our Process
           </h2>
-          <p className="text-lg text-secondary max-w-3xl mx-auto" data-testid="text-process-description">
-            A proven 6-step methodology that ensures seamless textile sourcing from initial consultation to final delivery.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto" data-testid="text-process-description">
+            A proven 6-step methodology that ensures seamless textile sourcing from consultation to delivery.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Process Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-            {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              const isLastInRow = (index + 1) % 3 === 0;
-              
-              return (
-                <div key={step.step} className="relative">
-                  {/* Process Card */}
-                  <div 
-                    className="bg-neutral rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 relative z-10"
-                    data-testid={`card-process-${index}`}
-                  >
-                    {/* Step Number */}
-                    <div className="flex items-center mb-6">
-                      <div className="bg-accent text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4">
-                        {step.step}
+        {/* Vertical Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Central Timeline Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-white/30 to-white/10 rounded-full hidden lg:block"></div>
+          
+          {processSteps.map((step, index) => {
+            const Icon = step.icon;
+            const isEven = index % 2 === 0;
+            
+            return (
+              <div key={step.step} className="relative mb-12 lg:mb-16">
+                {/* Timeline Dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full shadow-2xl flex items-center justify-center z-20 hidden lg:flex">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+                
+                {/* Content Card */}
+                <div className={`lg:w-5/12 ${isEven ? 'lg:mr-auto lg:pr-16' : 'lg:ml-auto lg:pl-16'}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
+                    {/* Mobile Icon */}
+                    <div className="lg:hidden flex items-center mb-6">
+                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                        <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-accent">
-                        <Icon className="w-6 h-6" />
+                      <div className="bg-white/20 text-white rounded-full px-4 py-2 text-sm font-bold">
+                        Step {step.step}
                       </div>
                     </div>
                     
-                    {/* Content */}
-                    <h3 className="text-xl font-semibold text-primary mb-4" data-testid={`text-process-title-${index}`}>
+                    {/* Desktop Step Number */}
+                    <div className="hidden lg:block">
+                      <div className={`inline-block bg-white/20 text-white rounded-full px-4 py-2 text-sm font-bold mb-4 ${isEven ? '' : 'float-right'}`}>
+                        Step {step.step}
+                      </div>
+                      <div className="clear-both"></div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-4" data-testid={`text-process-title-${index}`}>
                       {step.title}
                     </h3>
-                    <p className="text-secondary leading-relaxed" data-testid={`text-process-description-${index}`}>
+                    <p className="text-gray-200 leading-relaxed" data-testid={`text-process-description-${index}`}>
                       {step.description}
                     </p>
                   </div>
-                  
-                  {/* Flow Arrows - Only show between cards, not after last card in row */}
-                  {index < processSteps.length - 1 && !isLastInRow && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                      <div className="bg-white rounded-full p-2 shadow-md">
-                        <ArrowRight className="w-4 h-4 text-accent" />
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Vertical connecting line for mobile/tablet */}
-                  {index < processSteps.length - 1 && (
-                    <div className="lg:hidden flex justify-center mt-6">
-                      <div className="w-0.5 h-8 bg-accent opacity-30"></div>
-                    </div>
-                  )}
                 </div>
-              );
-            })}
-          </div>
+                
+                {/* Mobile Arrow */}
+                {index < processSteps.length - 1 && (
+                  <div className="lg:hidden flex justify-center mt-6">
+                    <ArrowDown className="w-6 h-6 text-white/60" />
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

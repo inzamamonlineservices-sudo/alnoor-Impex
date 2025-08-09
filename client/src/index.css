@@ -195,24 +195,8 @@
     z-index: -1;
   }
   
-  /* Windowed scrolling */
+  /* Smooth scrolling only */
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-  }
-  
-  /* Main sections for windowed scrolling */
-  main > section {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Hero section specific styling */
-  .hero-section {
-    min-height: 100vh;
-    scroll-snap-align: start;
   }
 }
