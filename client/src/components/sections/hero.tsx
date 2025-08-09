@@ -1,0 +1,69 @@
+import { useEffect, useState } from "react";
+import { Link } from "wouter";
+import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function HeroSection() {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const texts = ["Connecting Markets", "Delivering Quality", "Building Trust"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080"
+          alt="Modern textile manufacturing facility"
+          className="w-full h-full object-cover"
+          data-testid="img-hero-background"
+        />
+        <div className="absolute inset-0 hero-video-overlay"></div>
+      </div>
+      
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" data-testid="text-hero-title">
+          PakTextile Brokers
+        </h1>
+        <div className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay">
+          <span
+            className="transition-opacity duration-300"
+            data-testid="text-hero-rotating"
+          >
+            {texts[currentTextIndex]}
+          </span>
+        </div>
+        <p className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" data-testid="text-hero-description">
+          For over three decades, we've been Pakistan's trusted textile broker, connecting global buyers with premium suppliers and ensuring seamless trade processes worldwide.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
+          <Link href="/services" data-testid="button-hero-services">
+            <Button size="lg" className="bg-accent text-white hover:bg-blue-600 px-8 py-3 text-lg">
+              Explore Our Services
+            </Button>
+          </Link>
+          <Link href="/contact" data-testid="button-hero-contact">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg">
+              Get In Touch
+            </Button>
+          </Link>
+        </div>
+      </div>
+      
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="scroll-indicator text-white text-2xl" data-testid="icon-scroll-indicator">
+          <ChevronDown />
+        </div>
+      </div>
+    </section>
+  );
+}
