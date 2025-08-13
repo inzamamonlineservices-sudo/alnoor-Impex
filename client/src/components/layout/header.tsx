@@ -30,7 +30,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link href="/" data-testid="link-home" className="block">
               <img 
-                src="/logo-construction-optimized.svg" 
+                src="/logo-construction-new.svg" 
                 alt="Al Noor Impex Logo" 
                 className="h-[50px] w-auto transition-all duration-300 hover:scale-105"
               />
