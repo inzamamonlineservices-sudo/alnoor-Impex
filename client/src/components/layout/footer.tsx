@@ -23,11 +23,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">
-              PakTextile<span className="text-accent">Brokers</span>
-            </h3>
+            <div className="mb-6">
+              <img 
+                src="/logo-white-optimized.svg" 
+                alt="Al Noor Impex Logo" 
+                className="h-[60px] w-auto transition-all duration-300 hover:scale-105"
+              />
+            </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Pakistan's leading textile broker connecting global markets with premium suppliers for over 30 years.
+              Connecting textile manufacturers and buyers worldwide with three decades of trusted partnership and quality assurance.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -92,7 +96,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
           <p>
-            &copy; 2024 PakTextile Brokers. All rights reserved. |{" "}
+             &copy; 2024 Al Noor Impex. All rights reserved. |{" "}
             <a href="#" className="hover:text-accent" data-testid="link-privacy">
               Privacy Policy
             </a>{" "}

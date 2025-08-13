@@ -4,31 +4,45 @@ export default function ServicesSection() {
   const services = [
     {
       icon: Search,
-      title: "Premium Textile Sourcing",
-      description: "Connect with Pakistan's finest textile manufacturers who specialize in premium yarns, fabrics, and finished products. Our extensive network ensures access to quality materials at competitive prices.",
+      title: "Vendor Sourcing",
+      description: "We connect you with verified, reliable textile suppliers in Pakistan, ensuring quality and cost efficiency.",
       color: "text-accent",
-      features: ["Verified suppliers", "Quality assurance", "Competitive pricing"]
+      features: ["Comprehensive supplier verification", "Cost-effective solutions", "Quality assurance", "Long-term partnerships"]
+    },
+    {
+      icon: Compass,
+      title: "Product Design",
+      description: "Market-ready textile concepts aligned with your brand and sustainability goals.",
+      color: "text-teal",
+      features: ["Custom design development", "Sustainable materials", "Brand alignment", "Prototype development"]
     },
     {
       icon: TrendingUp,
-      title: "Market Intelligence",
-      description: "Stay ahead with comprehensive market analysis, trend forecasting, and pricing intelligence. We provide insights that help you make informed sourcing decisions.",
+      title: "Market Research",
+      description: "Detailed analysis of industry trends to guide your sourcing and production decisions.",
+      color: "text-accent",
+      features: ["Industry trend analysis", "Market forecasting", "Competitive analysis", "Pricing strategy"]
+    },
+    {
+      icon: CheckSquare,
+      title: "Production Follow-Up",
+      description: "End-to-end monitoring using ERP systems to ensure on-time, quality delivery.",
       color: "text-teal",
-      features: ["Trend analysis", "Price forecasting", "Market reports"]
+      features: ["Real-time tracking", "ERP integration", "Timeline management", "Quality checkpoints"]
     },
     {
       icon: CheckCircle,
-      title: "Quality Assurance",
-      description: "Rigorous quality control processes from raw materials to final inspection. We ensure every product meets international standards and your specific requirements.",
+      title: "Quality Control",
+      description: "From yarn to final packing, our team ensures your order meets global standards.",
       color: "text-accent",
-      features: ["Multi-stage testing", "International standards", "Custom specifications"]
+      features: ["Multi-stage inspections", "International standards", "Quality reports", "Corrective actions"]
     },
     {
       icon: Truck,
-      title: "Export & Logistics",
-      description: "Complete export documentation, shipping arrangements, and customs handling. We manage the entire logistics chain for seamless international trade.",
+      title: "Shipping & Support",
+      description: "Complete export documentation handling and after-sales assistance.",
       color: "text-teal",
-      features: ["Export documentation", "Shipping coordination", "Customs clearance"]
+      features: ["Export documentation", "Shipping coordination", "Customs clearance", "After-sales service"]
     },
   ];
 
@@ -45,7 +59,7 @@ export default function ServicesSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

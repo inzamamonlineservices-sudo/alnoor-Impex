@@ -46,7 +46,7 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" data-testid="text-hero-title">
-          PakTextile Brokers
+          Al Noor Impex
         </h1>
         <div className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay">
           <span
@@ -67,7 +67,7 @@ export default function HeroSection() {
             </Button>
           </Link>
           <Link href="/contact" data-testid="button-hero-contact">
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-3 text-lg">
+            <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-3 text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
               Get In Touch
             </Button>
           </Link>

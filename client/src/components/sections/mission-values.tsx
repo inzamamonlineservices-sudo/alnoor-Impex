@@ -11,7 +11,7 @@ export default function MissionValuesSection() {
     }));
   };
 
-  const truncateText = (text: string, maxLines: number = 5) => {
+  const truncateText = (text: string, maxLines: number = 2) => {
     const words = text.split(' ');
     const wordsPerLine = 8; // Approximate words per line
     const maxWords = maxLines * wordsPerLine;

@@ -78,38 +78,7 @@ export default function Services() {
     },
   ];
 
-  const processSteps = [
-    {
-      step: "1",
-      title: "Initial Consultation",
-      description: "Understanding your specific requirements and goals",
-    },
-    {
-      step: "2", 
-      title: "Supplier Matching",
-      description: "Connecting you with the most suitable verified suppliers",
-    },
-    {
-      step: "3",
-      title: "Negotiation & Agreement",
-      description: "Facilitating favorable terms and agreements",
-    },
-    {
-      step: "4",
-      title: "Production Monitoring",
-      description: "Overseeing the entire production process",
-    },
-    {
-      step: "5",
-      title: "Quality Assurance",
-      description: "Ensuring products meet your specifications",
-    },
-    {
-      step: "6",
-      title: "Delivery & Support",
-      description: "Managing shipping and providing ongoing support",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen">
@@ -181,44 +150,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Our Process */}
-        <section className="py-20 bg-neutral">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-process-title">
-                Our Process
-              </h2>
-              <p className="text-lg text-secondary" data-testid="text-process-description">
-                A proven step-by-step approach to ensure your success
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {processSteps.map((step, index) => (
-                <div
-                  key={step.step}
-                  className="bg-white rounded-xl p-6 text-center shadow-lg relative"
-                  data-testid={`card-process-${index}`}
-                >
-                  <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary mb-3" data-testid={`text-process-step-title-${index}`}>
-                    {step.title}
-                  </h3>
-                  <p className="text-secondary" data-testid={`text-process-step-description-${index}`}>
-                    {step.description}
-                  </p>
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                      <ArrowRight className="w-6 h-6 text-accent" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* CTA Section */}
         <section className="py-20 bg-primary text-white">
