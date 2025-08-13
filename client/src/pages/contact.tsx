@@ -37,15 +37,36 @@ export default function Contact() {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours."
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: "", email: "", phone: "", message: "" });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for contacting us. We'll get back to you within 24 hours."
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
@@ -64,7 +85,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@paktextilebrokers.com", "sales@paktextilebrokers.com"],
+      details: ["info@alnoor-impex.com", "sales@alnoor-impex.com"],
       color: "text-accent"
     },
     {
