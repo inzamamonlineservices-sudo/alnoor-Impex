@@ -75,15 +75,15 @@ export default function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-accent mr-2" />
-                <span data-testid="text-address">Karachi, Pakistan</span>
+                <span data-testid="text-address">H#70, C-Block, Nadeem Park, Kasur City, Punjab 55050, Pakistan</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-accent mr-2" />
-                <span data-testid="text-phone">+92 21 1234 5678</span>
+                <span data-testid="text-phone">+92 300 4419797</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-accent mr-2" />
-                <span data-testid="text-email">info@paktextilebrokers.com</span>
+                <span data-testid="text-email">info@alnoor-impex.com</span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 text-accent mr-2" />
