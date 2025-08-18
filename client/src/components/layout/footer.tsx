@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="col-span-1 lg:col-span-2">
             <div className="mb-6">
               <img 
-                src="/logo-white-new.svg" 
+                src="/ALNOOR FOOTER LOGO.svg" 
                 alt="Al Noor Impex Logo" 
                 className="h-[60px] w-auto transition-all duration-300 hover:scale-105"
               />
