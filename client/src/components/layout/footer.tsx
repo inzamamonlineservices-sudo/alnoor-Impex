@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2" data-aos="fade-right" data-aos-duration="800">
             <div className="mb-6">
               <img 
                 src="/ALNOOR FOOTER LOGO.svg" 
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
           
           {/* Quick Links */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
           
           {/* Contact Info */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
@@ -94,7 +94,12 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        <div 
+          className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="800"
+        >
           <p>
              &copy; 2024 Al Noor Impex. All rights reserved. |{" "}
             <a href="#" className="hover:text-accent" data-testid="link-privacy">

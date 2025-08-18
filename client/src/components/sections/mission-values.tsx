@@ -57,6 +57,9 @@ export default function MissionValuesSection() {
                 key={value.title}
                 className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
                 data-testid={`card-value-${value.title.toLowerCase()}`}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                data-aos-duration="800"
               >
                 <div className={`${value.color} text-4xl mb-4`}>
                   <Icon className="w-10 h-10" />

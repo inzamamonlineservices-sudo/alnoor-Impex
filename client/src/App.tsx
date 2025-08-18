@@ -1,9 +1,11 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useScrollToTop } from "./hooks/useScrollToTop";
+import { useEffect } from "react";
+import { refreshAOS } from "./lib/aos";
 import NotFound from "./pages/not-found";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -30,6 +32,14 @@ function Router() {
 function App() {
   // Use the scroll to top hook to reset scroll position on navigation
   useScrollToTop();
+  
+  // Get current location to detect route changes
+  const [location] = useLocation();
+  
+  // Refresh AOS animations when route changes
+  useEffect(() => {
+    refreshAOS();
+  }, [location]);
   
   return (
     <TooltipProvider>

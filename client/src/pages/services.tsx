@@ -87,10 +87,21 @@ export default function Services() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6" data-testid="text-services-hero-title">
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6" 
+              data-testid="text-services-hero-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               Our Services
             </h1>
-            <p className="text-xl leading-relaxed" data-testid="text-services-hero-subtitle">
+            <p 
+              className="text-xl leading-relaxed" 
+              data-testid="text-services-hero-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               Comprehensive textile brokerage solutions designed to streamline your global sourcing and trade operations
             </p>
           </div>
@@ -111,6 +122,9 @@ export default function Services() {
                       isEven ? "" : "lg:grid-flow-col-dense"
                     }`}
                     data-testid={`section-service-${index}`}
+                    data-aos={isEven ? "fade-right" : "fade-left"}
+                    data-aos-duration="800"
+                    data-aos-delay={`${index * 100}`}
                   >
                     <div className={isEven ? "lg:order-1" : "lg:order-2"}>
                       <div className="flex items-center mb-4">
@@ -155,13 +169,29 @@ export default function Services() {
         {/* CTA Section */}
         <section className="py-20 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6" data-testid="text-cta-title">
+            <h2 
+              className="text-3xl font-bold mb-6" 
+              data-testid="text-cta-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               Ready to Get Started?
             </h2>
-            <p className="text-xl mb-8" data-testid="text-cta-description">
+            <p 
+              className="text-xl mb-8" 
+              data-testid="text-cta-description"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               Let us help you connect with the right textile suppliers and streamline your sourcing process.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-aos-duration="800"
+            >
               <a
                 href="/contact"
                 className="bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-300 inline-block"

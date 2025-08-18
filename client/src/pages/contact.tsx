@@ -103,10 +103,21 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6" data-testid="text-contact-hero-title">
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6" 
+              data-testid="text-contact-hero-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               Contact Us
             </h1>
-            <p className="text-xl leading-relaxed" data-testid="text-contact-hero-subtitle">
+            <p 
+              className="text-xl leading-relaxed" 
+              data-testid="text-contact-hero-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               Ready to start your textile sourcing journey? Get in touch with our expert team today.
             </p>
           </div>
@@ -117,8 +128,13 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6" data-testid="text-contact-form-title">
+              <div data-aos="fade-right" data-aos-duration="800">
+                <h2 
+                  className="text-3xl font-bold text-primary mb-6" 
+                  data-testid="text-contact-form-title"
+                  data-aos="fade-down"
+                  data-aos-duration="800"
+                >
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -208,8 +224,13 @@ export default function Contact() {
               </div>
 
               {/* Contact Information */}
-              <div>
-                <h2 className="text-3xl font-bold text-primary mb-6" data-testid="text-contact-info-title">
+              <div data-aos="fade-left" data-aos-duration="800">
+                <h2 
+                  className="text-3xl font-bold text-primary mb-6" 
+                  data-testid="text-contact-info-title"
+                  data-aos="fade-down"
+                  data-aos-duration="800"
+                >
                   Get in Touch
                 </h2>
                 <p className="text-secondary mb-8" data-testid="text-contact-info-description">
@@ -224,6 +245,9 @@ export default function Contact() {
                         key={info.title}
                         className="flex items-start"
                         data-testid={`contact-info-${index}`}
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                        data-aos-delay={index * 100}
                       >
                         <div className={`${info.color} text-2xl mr-4 mt-1`}>
                           <Icon className="w-6 h-6" />
@@ -251,16 +275,32 @@ export default function Contact() {
         <section className="py-20 bg-neutral">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-map-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4" 
+                data-testid="text-map-title"
+                data-aos="fade-down"
+                data-aos-duration="800"
+              >
                 Find Us
               </h2>
-              <p className="text-secondary" data-testid="text-map-description">
+              <p 
+                className="text-secondary" 
+                data-testid="text-map-description"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="800"
+              >
                 Visit our office in the heart of Karachi's textile district
               </p>
             </div>
             
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-xl h-96 flex items-center justify-center" data-testid="map-placeholder">
+            <div 
+              className="bg-gray-200 rounded-xl h-96 flex items-center justify-center" 
+              data-testid="map-placeholder"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+            >
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-accent mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-primary mb-2">Interactive Map</h3>
@@ -279,7 +319,12 @@ export default function Contact() {
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-faq-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4" 
+                data-testid="text-faq-title"
+                data-aos="fade-down"
+                data-aos-duration="800"
+              >
                 Frequently Asked Questions
               </h2>
             </div>
@@ -303,13 +348,20 @@ export default function Contact() {
                   answer: "We typically work with 30% advance payment and 70% against shipping documents. Letter of Credit is also acceptable for established relationships."
                 }
               ].map((faq, index) => (
-                <div key={index} className="border-b border-gray-200 pb-6" data-testid={`faq-item-${index}`}>
+                <div 
+                  key={index} 
+                  data-aos="fade-up" 
+                  data-aos-duration="800" 
+                  data-aos-delay={index * 100}
+                >
+                <div className="border-b border-gray-200 pb-6" data-testid={`faq-item-${index}`}>
                   <h3 className="text-lg font-semibold text-primary mb-3" data-testid={`text-faq-question-${index}`}>
                     {faq.question}
                   </h3>
                   <p className="text-secondary" data-testid={`text-faq-answer-${index}`}>
                     {faq.answer}
                   </p>
+                </div>
                 </div>
               ))}
             </div>

@@ -93,10 +93,21 @@ export default function Products() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6" data-testid="text-products-hero-title">
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6" 
+              data-testid="text-products-hero-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               Our Products
             </h1>
-            <p className="text-xl leading-relaxed" data-testid="text-products-hero-subtitle">
+            <p 
+              className="text-xl leading-relaxed" 
+              data-testid="text-products-hero-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               From premium yarns to finished garments, we source the finest textile products from Pakistan's leading manufacturers
             </p>
           </div>
@@ -117,6 +128,9 @@ export default function Products() {
                       isEven ? "" : "lg:grid-flow-col-dense"
                     }`}
                     data-testid={`section-product-${product.id}`}
+                    data-aos={isEven ? "fade-right" : "fade-left"}
+                    data-aos-duration="800"
+                    data-aos-delay={`${index * 100}`}
                   >
                     <div className={isEven ? "lg:order-1" : "lg:order-2"}>
                       <h2 className="text-3xl font-bold text-primary mb-4" data-testid={`text-product-title-${index}`}>

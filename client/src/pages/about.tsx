@@ -60,10 +60,21 @@ export default function About() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6" data-testid="text-about-title">
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6" 
+              data-testid="text-about-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               About PakTextile Brokers
             </h1>
-            <p className="text-xl leading-relaxed" data-testid="text-about-subtitle">
+            <p 
+              className="text-xl leading-relaxed" 
+              data-testid="text-about-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               Building bridges between Pakistan's finest textile manufacturers and global markets since 1994
             </p>
           </div>
@@ -73,7 +84,7 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div data-aos="fade-right" data-aos-duration="800">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-overview-title">
                   Three Decades of Excellence
                 </h2>
@@ -89,7 +100,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-left" data-aos-duration="800">
                 <img
                   src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                   alt="Textile manufacturing facility"
@@ -105,10 +116,21 @@ export default function About() {
         <section className="py-20 bg-neutral">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4 section-heading" data-testid="text-strengths-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4 section-heading" 
+                data-testid="text-strengths-title"
+                data-aos="fade-down"
+                data-aos-duration="800"
+              >
                 Our Core Strengths
               </h2>
-              <p className="text-lg text-secondary max-w-3xl mx-auto" data-testid="text-strengths-description">
+              <p 
+                className="text-lg text-secondary max-w-3xl mx-auto" 
+                data-testid="text-strengths-description"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="800"
+              >
                 What sets us apart in the competitive textile brokerage industry
               </p>
             </div>
@@ -121,6 +143,9 @@ export default function About() {
                     key={strength.title}
                     className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
                     data-testid={`card-strength-${index}`}
+                    data-aos="fade-up"
+                    data-aos-delay={`${index * 100}`}
+                    data-aos-duration="800"
                   >
                     <div className="text-accent text-4xl mb-4 flex justify-center">
                       <Icon className="w-12 h-12" />
@@ -142,7 +167,7 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="text-center">
+              <div className="text-center" data-aos="fade-right" data-aos-duration="800">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-mission-title">
                   Our Mission
                 </h2>
@@ -150,7 +175,7 @@ export default function About() {
                   To be the premier bridge connecting Pakistan's textile excellence with global markets, facilitating mutually beneficial partnerships that drive growth, innovation, and sustainable practices in the textile industry.
                 </p>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-aos="fade-left" data-aos-duration="800">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-vision-title">
                   Our Vision
                 </h2>
@@ -173,7 +198,12 @@ export default function About() {
           
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-8 section-heading section-heading-white" data-testid="text-quality-title">
+              <h2 
+                className="text-4xl font-bold text-white mb-8 section-heading section-heading-white" 
+                data-testid="text-quality-title"
+                data-aos="fade-down"
+                data-aos-duration="800"
+              >
                 <span className="shape" style={{background: 'rgba(255,255,255,0.3)'}}></span>
                 Quality Policy
               </h2>
@@ -181,7 +211,11 @@ export default function About() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Policy Statement */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-white/20 relative overflow-hidden">
+              <div 
+                className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-white/20 relative overflow-hidden"
+                data-aos="fade-right"
+                data-aos-duration="800"
+              >
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>

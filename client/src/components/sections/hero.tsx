@@ -45,10 +45,19 @@ export default function HeroSection() {
       
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" data-testid="text-hero-title">
+        <h1 
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" 
+          data-testid="text-hero-title"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           Al Noor Impex
         </h1>
-        <div className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay">
+        <div 
+          className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <span
             className="transition-opacity duration-300"
             data-testid="text-hero-rotating"
@@ -57,10 +66,19 @@ export default function HeroSection() {
             <span className="animate-pulse">|</span>
           </span>
         </div>
-        <p className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" data-testid="text-hero-description">
+        <p 
+          className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" 
+          data-testid="text-hero-description"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           For over three decades, we've been Pakistan's trusted textile broker, connecting global buyers with premium suppliers and ensuring seamless trade processes worldwide.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
+        <div 
+          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <Link href="/services" data-testid="button-hero-services">
             <Button size="lg" className="bg-accent text-white hover:bg-blue-600 px-8 py-3 text-lg">
               Explore Our Services
@@ -75,8 +93,13 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="scroll-indicator text-white text-2xl" data-testid="icon-scroll-indicator">
+      <div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        data-aos="fade-up"
+        data-aos-delay="800"
+        data-aos-offset="0"
+      >
+        <div className="scroll-indicator text-white text-2xl animate-bounce" data-testid="icon-scroll-indicator">
           <ChevronDown />
         </div>
       </div>

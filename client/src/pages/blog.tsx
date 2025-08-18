@@ -92,10 +92,21 @@ export default function Blog() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6" data-testid="text-blog-hero-title">
+            <h1 
+              className="text-4xl sm:text-5xl font-bold mb-6" 
+              data-testid="text-blog-hero-title"
+              data-aos="fade-down"
+              data-aos-duration="800"
+            >
               Industry Insights & News
             </h1>
-            <p className="text-xl leading-relaxed" data-testid="text-blog-hero-subtitle">
+            <p 
+              className="text-xl leading-relaxed" 
+              data-testid="text-blog-hero-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
               Stay informed with the latest trends, tips, and insights from the textile industry
             </p>
           </div>
@@ -105,7 +116,12 @@ export default function Blog() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-featured-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4" 
+                data-testid="text-featured-title"
+                data-aos="fade-down"
+                data-aos-duration="800"
+              >
                 Featured Articles
               </h2>
             </div>
@@ -116,6 +132,9 @@ export default function Blog() {
                   key={post.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                   data-testid={`card-featured-post-${index}`}
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay={index * 100}
                 >
                   <img
                     src={post.image}
@@ -161,16 +180,26 @@ export default function Blog() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-4 gap-8">
               {/* Sidebar with Categories */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-1" data-aos="fade-right" data-aos-duration="800">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-lg font-semibold text-primary mb-4" data-testid="text-categories-title">
+                  <h3 
+                    className="text-lg font-semibold text-primary mb-4" 
+                    data-testid="text-categories-title"
+                    data-aos="fade-down"
+                    data-aos-duration="800"
+                  >
                     Categories
                   </h3>
                   <ul className="space-y-2">
                     {categories.map((category, index) => {
                       const Icon = category.icon;
                       return (
-                        <li key={category.name}>
+                        <li 
+                          key={category.name}
+                          data-aos="fade-up"
+                          data-aos-duration="800"
+                          data-aos-delay={index * 100}
+                        >
                           <button
                             className="w-full text-left flex items-center justify-between py-2 px-3 rounded-lg hover:bg-neutral transition-colors duration-200"
                             data-testid={`button-category-${index}`}
@@ -191,13 +220,16 @@ export default function Blog() {
               </div>
 
               {/* Blog Posts */}
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-3" data-aos="fade-left" data-aos-duration="800">
                 <div className="grid gap-6">
                   {regularPosts.map((post, index) => (
                     <article
                       key={post.id}
                       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       data-testid={`card-blog-post-${index}`}
+                      data-aos="fade-up"
+                      data-aos-duration="800"
+                      data-aos-delay={index * 100}
                     >
                       <div className="md:flex">
                         <div className="md:w-1/3">

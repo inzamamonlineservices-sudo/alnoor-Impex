@@ -50,11 +50,22 @@ export default function ServicesSection() {
     <section className="py-20 bg-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4 section-heading" data-testid="text-services-title">
+          <h2 
+            className="text-3xl sm:text-4xl font-bold text-primary mb-4 section-heading" 
+            data-testid="text-services-title"
+            data-aos="fade-down"
+            data-aos-duration="800"
+          >
             <span className="shape"></span>
             Our Services
           </h2>
-          <p className="text-lg text-secondary max-w-3xl mx-auto" data-testid="text-services-description">
+          <p 
+            className="text-lg text-secondary max-w-3xl mx-auto" 
+            data-testid="text-services-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             Comprehensive textile brokerage solutions designed to streamline your global sourcing and trade operations.
           </p>
         </div>
@@ -67,6 +78,9 @@ export default function ServicesSection() {
                 key={service.title}
                 className="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                 data-testid={`card-service-${index}`}
+                data-aos="fade-up"
+                data-aos-delay={`${index * 100}`}
+                data-aos-duration="800"
               >
                 <div className="flex items-center mb-6">
                   <div className={`${service.color} bg-gray-50 rounded-2xl p-4 mr-4`}>
