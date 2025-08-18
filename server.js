@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Email service configuration
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123456789');
+const resend = new Resend('re_JPGubBR8_94iay8a15AGxvvRFLpBSqe7Z');
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
@@ -67,20 +67,20 @@ app.post('/api/contact', async (req, res) => {
 // Test endpoint
 app.get('/api/test', (req, res) => {
   console.log('Environment variables:', {
-    EMAIL_USER: process.env.EMAIL_USER,
-    EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
+    RESEND_API_KEY: process.env.RESEND_API_KEY ? 'Set' : 'Not set',
     NODE_ENV: process.env.NODE_ENV
   });
   
   res.json({ 
     success: true, 
-    message: 'Server is running!',
-    emailUser: process.env.EMAIL_USER || 'Not configured',
-    emailPass: process.env.EMAIL_PASS ? 'Set' : 'Not set'
+    message: 'Server is running with Resend email service!',
+    emailService: 'Resend',
+    apiKey: process.env.RESEND_API_KEY ? 'Configured' : 'Using default'
   });
 });
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Email configured for: ${process.env.EMAIL_USER}`);
+  console.log(`Email service: Resend`);
+  console.log(`API Key: ${process.env.RESEND_API_KEY ? 'Configured' : 'Using default'}`);
 });

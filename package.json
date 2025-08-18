@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "tsc",
-    "server": "node --env-file=.env server.js",
+    "server": "node server.js",
     "dev:full": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {

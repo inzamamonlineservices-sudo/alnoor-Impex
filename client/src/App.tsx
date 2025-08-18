@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 import NotFound from "./pages/not-found";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -27,6 +28,9 @@ function Router() {
 }
 
 function App() {
+  // Use the scroll to top hook to reset scroll position on navigation
+  useScrollToTop();
+  
   return (
     <TooltipProvider>
       <Toaster />
