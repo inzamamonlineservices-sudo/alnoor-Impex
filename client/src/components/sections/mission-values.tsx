@@ -47,7 +47,7 @@ export default function MissionValuesSection() {
   ];
 
   return (
-    <section className="relative -mt-32 z-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative -mt-16 md:-mt-24 lg:-mt-32 z-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => {
