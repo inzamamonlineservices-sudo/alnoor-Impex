@@ -44,7 +44,7 @@ export default function HeroSection() {
       </div>
       
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pb-16 sm:pb-8 lg:pb-0">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pb-20 sm:pb-16 lg:pb-12">
         <h1 
           className="text-3xl sm:text-3xl lg:text-3xl font-bold mb-6 animate-fade-in" 
           data-testid="text-hero-title"
@@ -92,17 +92,7 @@ export default function HeroSection() {
           </Link>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        data-aos="fade"
-        data-aos-duration="180"
-      >
-        <div className="scroll-indicator text-white text-2xl flex items-center justify-center" data-testid="icon-scroll-indicator">
-          <ChevronDown />
-        </div>
-      </div>
+
     </section>
   );
 }
