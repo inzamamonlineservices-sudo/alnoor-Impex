@@ -49,7 +49,7 @@ export default function HeroSection() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" 
           data-testid="text-hero-title"
         >
-          Al Noor Impex
+          Alnoor Impex
         </h1>
         <div 
           className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay"
@@ -72,7 +72,7 @@ export default function HeroSection() {
           data-aos-duration="200"
           data-aos-delay="60"
         >
-          For over three decades, we've been Pakistan's trusted textile broker, connecting global buyers with premium suppliers and ensuring seamless trade processes worldwide.
+          With over a decade of proven expertise, Al Noor Impex is a trusted global textile sourcing partner. We connect buyers with leading suppliers of yarn, fabrics, garments, and home furnishings, ensuring quality, reliability, and seamless trade across international markets.
         </p>
         <div 
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3"
