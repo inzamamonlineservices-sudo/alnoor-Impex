@@ -46,13 +46,13 @@ export default function HeroSection() {
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h1 
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" 
+          className="text-3xl sm:text-3xl lg:text-3xl font-bold mb-6 animate-fade-in" 
           data-testid="text-hero-title"
         >
-          Alnoor Impex
+          Your Trusted Global Partner in Textile Sourcing & Trade
         </h1>
         <div 
-          className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay"
+          className="text-2xl sm:text-2xl lg:text-2xl font-light mb-8 animate-fade-in-delay"
           data-aos="fade"
           data-aos-duration="180"
           data-aos-delay="60"
@@ -66,7 +66,7 @@ export default function HeroSection() {
           </span>
         </div>
         <p 
-          className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" 
+          className="text-lg sm:text-xl mb-10 max-w-6xl mx-auto leading-relaxed animate-fade-in-delay-2" 
           data-testid="text-hero-description"
           data-aos="fade"
           data-aos-duration="200"
