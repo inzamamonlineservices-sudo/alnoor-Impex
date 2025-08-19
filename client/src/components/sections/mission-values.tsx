@@ -23,25 +23,25 @@ export default function MissionValuesSection() {
     {
       icon: Handshake,
       title: "Collaboration",
-      description: "For over a decade in Pakistan, we've cultivated strong, enduring relationships with both suppliers and customers. These partnerships have driven the development of innovative products, opened access to global markets, and fostered trust across our entire network. By acting as a bridge between manufacturers and buyers, we ensure smoother transactions, faster solutions, and long-term success for all parties.",
+      description: "We cultivate strong partnerships with suppliers and buyers worldwide, ensuring smoother transactions, faster solutions, and lasting success across the textile supply chain.",
       color: "text-teal",
     },
     {
       icon: Shield,
       title: "Integrity",
-      description: "We uphold uncompromising fairness and transparency in every business dealing. When market challenges arise, we prioritize trust over short-term gain — even taking on claims ourselves to maintain strong supplier and client relationships. Our policies and practices are built on accountability, consistency, and the highest ethical standards.",
+      description: "Our business is built on trust, transparency, and accountability. We uphold the highest ethical standards, prioritizing long-term relationships over short-term gains.",
       color: "text-accent",
     },
     {
       icon: Lightbulb,
       title: "Knowledge",
-      description: "Through continuous market research, staff training, and technological innovation, we empower our partners to stay competitive in an evolving textile industry. From emerging fiber technologies to shifting global demand patterns, we keep stakeholders informed while actively exploring sustainable advancements in cotton sourcing and processing.",
+      description: "Backed by continuous market research and industry expertise, we help clients stay competitive with insights into global textile trends, demand shifts, and product innovations.",
       color: "text-teal",
     },
     {
       icon: Leaf,
-      title: "Sustainability",
-      description: "We recognize our responsibility to promote environmentally responsible practices in the cotton supply chain. By working with mills and farms that follow sustainable farming methods, efficient water usage, and ethical labor standards, we help clients meet their environmental goals while supporting a healthier planet for future generations.",
+      title: "Reliability",
+      description: "We deliver consistent quality, dependable timelines, and seamless trade support — making us a trusted partner in textile sourcing worldwide.",
       color: "text-accent",
     },
   ];
