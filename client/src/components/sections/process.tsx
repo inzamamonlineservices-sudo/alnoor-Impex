@@ -114,8 +114,8 @@ export default function ProcessSection() {
         <div className="text-center mb-20">
           <div 
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-emerald-100 border border-blue-200 rounded-full px-6 py-3 mb-6"
-            data-aos="fade-down"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-duration="200"
           >
             <Sparkles className="w-5 h-5 text-blue-600" />
             <span className="text-slate-700 font-medium text-sm">Our Methodology</span>
@@ -123,17 +123,17 @@ export default function ProcessSection() {
           
           <h2 
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos="fade"
+            data-aos-duration="200"
           >
             Our Process
           </h2>
           
           <p 
             className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-delay="60"
+            data-aos-duration="220"
           >
             A proven 6-step methodology that ensures seamless textile sourcing from consultation to delivery, 
             backed by three decades of industry expertise.

@@ -96,17 +96,17 @@ export default function Products() {
             <h1 
               className="text-4xl sm:text-5xl font-bold mb-6" 
               data-testid="text-products-hero-title"
-              data-aos="fade-down"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-duration="200"
             >
               Our Products
             </h1>
             <p 
               className="text-xl leading-relaxed" 
               data-testid="text-products-hero-subtitle"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
             >
               From premium yarns to finished garments, we source the finest textile products from Pakistan's leading manufacturers
             </p>
@@ -128,9 +128,9 @@ export default function Products() {
                       isEven ? "" : "lg:grid-flow-col-dense"
                     }`}
                     data-testid={`section-product-${product.id}`}
-                    data-aos={isEven ? "fade-right" : "fade-left"}
-                    data-aos-duration="800"
-                    data-aos-delay={`${index * 100}`}
+                    data-aos="fade-up"
+                    data-aos-duration="220"
+                    data-aos-delay={index <= 2 ? index * 40 : (index - 3) * 40}
                   >
                     <div className={isEven ? "lg:order-1" : "lg:order-2"}>
                       <h2 className="text-3xl font-bold text-primary mb-4" data-testid={`text-product-title-${index}`}>
@@ -192,10 +192,21 @@ export default function Products() {
         <section className="py-20 bg-neutral">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4" data-testid="text-why-choose-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4" 
+                data-testid="text-why-choose-title"
+                data-aos="fade"
+                data-aos-duration="200"
+              >
                 Why Choose Our Products?
               </h2>
-              <p className="text-lg text-secondary" data-testid="text-why-choose-description">
+              <p 
+                className="text-lg text-secondary" 
+                data-testid="text-why-choose-description"
+                data-aos="fade"
+                data-aos-delay="60"
+                data-aos-duration="220"
+              >
                 Quality, reliability, and value that sets us apart
               </p>
             </div>
@@ -224,6 +235,9 @@ export default function Products() {
                     key={benefit.title}
                     className="text-center"
                     data-testid={`card-benefit-${index}`}
+                    data-aos="fade-up"
+                    data-aos-delay={index <= 2 ? index * 60 : (index - 3) * 60}
+                    data-aos-duration="180"
                   >
                     <div className="text-accent text-4xl mb-4 flex justify-center">
                       <Icon className="w-12 h-12" />
@@ -244,13 +258,29 @@ export default function Products() {
         {/* CTA Section */}
         <section className="py-20 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6" data-testid="text-products-cta-title">
+            <h2 
+              className="text-3xl font-bold mb-6" 
+              data-testid="text-products-cta-title"
+              data-aos="fade"
+              data-aos-duration="200"
+            >
               Ready to Source Quality Textiles?
             </h2>
-            <p className="text-xl mb-8" data-testid="text-products-cta-description">
+            <p 
+              className="text-xl mb-8" 
+              data-testid="text-products-cta-description"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
+            >
               Contact us today to discuss your specific requirements and get personalized sourcing solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              data-aos="fade"
+              data-aos-delay="120"
+              data-aos-duration="200"
+            >
               <a
                 href="/contact"
                 className="bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-300 inline-block"

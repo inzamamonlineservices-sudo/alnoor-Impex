@@ -48,15 +48,14 @@ export default function HeroSection() {
         <h1 
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" 
           data-testid="text-hero-title"
-          data-aos="fade-down"
-          data-aos-duration="1000"
         >
           Al Noor Impex
         </h1>
         <div 
           className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 animate-fade-in-delay"
-          data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos="fade"
+          data-aos-duration="180"
+          data-aos-delay="60"
         >
           <span
             className="transition-opacity duration-300"
@@ -69,15 +68,17 @@ export default function HeroSection() {
         <p 
           className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-delay-2" 
           data-testid="text-hero-description"
-          data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos="fade"
+          data-aos-duration="200"
+          data-aos-delay="60"
         >
           For over three decades, we've been Pakistan's trusted textile broker, connecting global buyers with premium suppliers and ensuring seamless trade processes worldwide.
         </p>
         <div 
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3"
-          data-aos="fade-up"
-          data-aos-delay="600"
+          data-aos="fade"
+          data-aos-duration="200"
+          data-aos-delay="60"
         >
           <Link href="/services" data-testid="button-hero-services">
             <Button size="lg" className="bg-accent text-white hover:bg-blue-600 px-8 py-3 text-lg">
@@ -95,11 +96,10 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       <div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        data-aos="fade-up"
-        data-aos-delay="800"
-        data-aos-offset="0"
+        data-aos="fade"
+        data-aos-duration="180"
       >
-        <div className="scroll-indicator text-white text-2xl animate-bounce" data-testid="icon-scroll-indicator">
+        <div className="scroll-indicator text-white text-2xl" data-testid="icon-scroll-indicator">
           <ChevronDown />
         </div>
       </div>

@@ -53,8 +53,8 @@ export default function ServicesSection() {
           <h2 
             className="text-3xl sm:text-4xl font-bold text-primary mb-4 section-heading" 
             data-testid="text-services-title"
-            data-aos="fade-down"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-duration="200"
           >
             <span className="shape"></span>
             Our Services
@@ -62,9 +62,9 @@ export default function ServicesSection() {
           <p 
             className="text-lg text-secondary max-w-3xl mx-auto" 
             data-testid="text-services-description"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-delay="60"
+            data-aos-duration="220"
           >
             Comprehensive textile brokerage solutions designed to streamline your global sourcing and trade operations.
           </p>
@@ -79,8 +79,8 @@ export default function ServicesSection() {
                 className="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                 data-testid={`card-service-${index}`}
                 data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
-                data-aos-duration="800"
+                data-aos-delay={index <= 2 ? index * 40 : (index - 3) * 40}
+                data-aos-duration="220"
               >
                 <div className="flex items-center mb-6">
                   <div className={`${service.color} bg-gray-50 rounded-2xl p-4 mr-4`}>

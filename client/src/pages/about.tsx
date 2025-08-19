@@ -63,17 +63,17 @@ export default function About() {
             <h1 
               className="text-4xl sm:text-5xl font-bold mb-6" 
               data-testid="text-about-title"
-              data-aos="fade-down"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-duration="200"
             >
               About PakTextile Brokers
             </h1>
             <p 
               className="text-xl leading-relaxed" 
               data-testid="text-about-subtitle"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
             >
               Building bridges between Pakistan's finest textile manufacturers and global markets since 1994
             </p>
@@ -84,7 +84,7 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div data-aos="fade-right" data-aos-duration="800">
+              <div data-aos="fade" data-aos-duration="180">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-overview-title">
                   Three Decades of Excellence
                 </h2>
@@ -100,7 +100,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div data-aos="fade-left" data-aos-duration="800">
+              <div data-aos="fade" data-aos-duration="180">
                 <img
                   src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                   alt="Textile manufacturing facility"
@@ -119,17 +119,17 @@ export default function About() {
               <h2 
                 className="text-3xl font-bold text-primary mb-4 section-heading" 
                 data-testid="text-strengths-title"
-                data-aos="fade-down"
-                data-aos-duration="800"
+                data-aos="fade"
+                data-aos-duration="200"
               >
                 Our Core Strengths
               </h2>
               <p 
                 className="text-lg text-secondary max-w-3xl mx-auto" 
                 data-testid="text-strengths-description"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="800"
+                data-aos="fade"
+                data-aos-delay="60"
+                data-aos-duration="220"
               >
                 What sets us apart in the competitive textile brokerage industry
               </p>
@@ -144,8 +144,8 @@ export default function About() {
                     className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
                     data-testid={`card-strength-${index}`}
                     data-aos="fade-up"
-                    data-aos-delay={`${index * 100}`}
-                    data-aos-duration="800"
+                    data-aos-delay={index <= 2 ? index * 60 : (index - 3) * 60}
+                    data-aos-duration="180"
                   >
                     <div className="text-accent text-4xl mb-4 flex justify-center">
                       <Icon className="w-12 h-12" />
@@ -167,7 +167,7 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="text-center" data-aos="fade-right" data-aos-duration="800">
+              <div className="text-center" data-aos="fade" data-aos-duration="180">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-mission-title">
                   Our Mission
                 </h2>
@@ -175,7 +175,7 @@ export default function About() {
                   To be the premier bridge connecting Pakistan's textile excellence with global markets, facilitating mutually beneficial partnerships that drive growth, innovation, and sustainable practices in the textile industry.
                 </p>
               </div>
-              <div className="text-center" data-aos="fade-left" data-aos-duration="800">
+              <div className="text-center" data-aos="fade" data-aos-duration="180">
                 <h2 className="text-3xl font-bold text-primary mb-6 section-heading" data-testid="text-vision-title">
                   Our Vision
                 </h2>
@@ -201,8 +201,8 @@ export default function About() {
               <h2 
                 className="text-4xl font-bold text-white mb-8 section-heading section-heading-white" 
                 data-testid="text-quality-title"
-                data-aos="fade-down"
-                data-aos-duration="800"
+                data-aos="fade"
+                data-aos-duration="200"
               >
                 <span className="shape" style={{background: 'rgba(255,255,255,0.3)'}}></span>
                 Quality Policy
@@ -213,8 +213,8 @@ export default function About() {
               {/* Policy Statement */}
               <div 
                 className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl border border-white/20 relative overflow-hidden"
-                data-aos="fade-right"
-                data-aos-duration="800"
+                data-aos="fade"
+                data-aos-duration="180"
               >
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
@@ -263,10 +263,21 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-primary mb-4 section-heading" data-testid="text-team-title">
+              <h2 
+                className="text-3xl font-bold text-primary mb-4 section-heading" 
+                data-testid="text-team-title"
+                data-aos="fade"
+                data-aos-duration="200"
+              >
                 Meet Our Team
               </h2>
-              <p className="text-lg text-secondary" data-testid="text-team-description">
+              <p 
+                className="text-lg text-secondary" 
+                data-testid="text-team-description"
+                data-aos="fade"
+                data-aos-delay="60"
+                data-aos-duration="220"
+              >
                 Experienced professionals dedicated to your success
               </p>
             </div>
@@ -277,6 +288,9 @@ export default function About() {
                   key={member.name}
                   className="text-center"
                   data-testid={`card-team-${index}`}
+                  data-aos="fade-up"
+                  data-aos-delay={index <= 2 ? index * 60 : (index - 3) * 60}
+                  data-aos-duration="180"
                 >
                   <img
                     src={member.image}

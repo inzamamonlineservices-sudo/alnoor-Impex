@@ -95,17 +95,17 @@ export default function Blog() {
             <h1 
               className="text-4xl sm:text-5xl font-bold mb-6" 
               data-testid="text-blog-hero-title"
-              data-aos="fade-down"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-duration="200"
             >
               Industry Insights & News
             </h1>
             <p 
               className="text-xl leading-relaxed" 
               data-testid="text-blog-hero-subtitle"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="800"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
             >
               Stay informed with the latest trends, tips, and insights from the textile industry
             </p>
@@ -119,8 +119,8 @@ export default function Blog() {
               <h2 
                 className="text-3xl font-bold text-primary mb-4" 
                 data-testid="text-featured-title"
-                data-aos="fade-down"
-                data-aos-duration="800"
+                data-aos="fade"
+                data-aos-duration="200"
               >
                 Featured Articles
               </h2>
@@ -133,8 +133,8 @@ export default function Blog() {
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                   data-testid={`card-featured-post-${index}`}
                   data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-delay={index * 100}
+                  data-aos-duration="180"
+                  data-aos-delay={index * 60}
                 >
                   <img
                     src={post.image}
@@ -180,13 +180,13 @@ export default function Blog() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-4 gap-8">
               {/* Sidebar with Categories */}
-              <div className="lg:col-span-1" data-aos="fade-right" data-aos-duration="800">
+              <div className="lg:col-span-1" data-aos="fade" data-aos-duration="180">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <h3 
                     className="text-lg font-semibold text-primary mb-4" 
                     data-testid="text-categories-title"
-                    data-aos="fade-down"
-                    data-aos-duration="800"
+                    data-aos="fade"
+                    data-aos-duration="200"
                   >
                     Categories
                   </h3>
@@ -197,8 +197,8 @@ export default function Blog() {
                         <li 
                           key={category.name}
                           data-aos="fade-up"
-                          data-aos-duration="800"
-                          data-aos-delay={index * 100}
+                          data-aos-duration="180"
+                          data-aos-delay={index * 60}
                         >
                           <button
                             className="w-full text-left flex items-center justify-between py-2 px-3 rounded-lg hover:bg-neutral transition-colors duration-200"
@@ -220,7 +220,7 @@ export default function Blog() {
               </div>
 
               {/* Blog Posts */}
-              <div className="lg:col-span-3" data-aos="fade-left" data-aos-duration="800">
+              <div className="lg:col-span-3" data-aos="fade" data-aos-duration="180">
                 <div className="grid gap-6">
                   {regularPosts.map((post, index) => (
                     <article
@@ -228,8 +228,8 @@ export default function Blog() {
                       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       data-testid={`card-blog-post-${index}`}
                       data-aos="fade-up"
-                      data-aos-duration="800"
-                      data-aos-delay={index * 100}
+                      data-aos-duration="180"
+                      data-aos-delay={index * 60}
                     >
                       <div className="md:flex">
                         <div className="md:w-1/3">
@@ -300,16 +300,30 @@ export default function Blog() {
         {/* Newsletter CTA */}
         <section className="py-20 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6" data-testid="text-blog-newsletter-title">
+            <h2 
+              className="text-3xl font-bold mb-6" 
+              data-testid="text-blog-newsletter-title"
+              data-aos="fade"
+              data-aos-duration="200"
+            >
               Stay Updated
             </h2>
-            <p className="text-xl mb-8" data-testid="text-blog-newsletter-description">
+            <p 
+              className="text-xl mb-8" 
+              data-testid="text-blog-newsletter-description"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
+            >
               Subscribe to our newsletter to get the latest industry insights delivered to your inbox.
             </p>
             <a
               href="/#newsletter"
               className="bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-300 inline-block"
               data-testid="button-blog-newsletter-cta"
+              data-aos="fade"
+              data-aos-delay="120"
+              data-aos-duration="200"
             >
               Subscribe Now
             </a>

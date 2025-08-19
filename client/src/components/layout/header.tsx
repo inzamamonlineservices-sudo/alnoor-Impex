@@ -27,7 +27,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-18 md:h-20 lg:h-24">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0" data-aos="fade" data-aos-duration="200">
             <Link href="/" data-testid="link-home" className="block">
               <img 
                 src="/ALNOOR HEADER LOGO.svg" 
@@ -38,7 +38,7 @@ export default function Header() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8" data-aos="fade" data-aos-duration="200">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -64,7 +64,7 @@ export default function Header() {
           </nav>
           
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="60">
             <Link href="/contact" data-testid="button-contact">
               <Button className="bg-primary text-white hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 Get Quote

@@ -27,7 +27,8 @@ export default function StorySection() {
           <h2 
             className="text-4xl sm:text-5xl font-bold text-primary mb-6 section-heading" 
             data-testid="text-story-title"
-            data-aos="fade-down"
+            data-aos="fade"
+            data-aos-duration="200"
           >
             <span className="shape"></span>
             Our Story
@@ -35,8 +36,9 @@ export default function StorySection() {
           <p 
             className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed" 
             data-testid="text-story-subtitle"
-            data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos="fade"
+            data-aos-delay="60"
+            data-aos-duration="200"
           >
             Three decades of passion, innovation, and unwavering commitment to connecting Pakistan's textile excellence with the world.
           </p>
@@ -48,8 +50,8 @@ export default function StorySection() {
           <div className="space-y-6">
             <div 
               className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
-              data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos="fade"
+              data-aos-duration="220"
             >
               <h3 className="text-2xl font-bold text-primary mb-4">A Legacy of Trust</h3>
               <div className="space-y-4 text-secondary leading-relaxed">
@@ -68,9 +70,9 @@ export default function StorySection() {
             {/* CEO Quote */}
             <div 
               className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white relative overflow-hidden"
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="1000"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
               <div className="relative z-10">
@@ -95,7 +97,7 @@ export default function StorySection() {
           </div>
 
           {/* CEO Image */}
-          <div className="relative" data-aos="fade-left" data-aos-duration="1000">
+          <div className="relative" data-aos="fade" data-aos-duration="220">
             <div className="bg-gradient-to-br from-primary to-accent rounded-3xl p-2 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1000"
@@ -107,8 +109,9 @@ export default function StorySection() {
             {/* Floating stats card */}
             <div 
               className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-xl border border-gray-100"
-              data-aos="zoom-in"
-              data-aos-delay="400"
+              data-aos="fade"
+              data-aos-delay="60"
+              data-aos-duration="220"
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary mb-1">30+</div>
@@ -128,8 +131,8 @@ export default function StorySection() {
                 className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-accent/20"
                 data-testid={`card-stat-${index}`}
                 data-aos="fade-up"
-                data-aos-delay={index * 100}
-                data-aos-duration="800"
+                data-aos-delay={index <= 2 ? index * 40 : (index - 3) * 40}
+                data-aos-duration="220"
               >
                 <div className="text-accent text-4xl mb-4 flex justify-center">
                   <Icon className="w-12 h-12" />

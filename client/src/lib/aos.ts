@@ -2,19 +2,33 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 /**
- * Initialize AOS (Animate On Scroll) with default configuration
+ * Check if user prefers reduced motion
+ */
+function shouldReduceMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+/**
+ * Initialize AOS (Animate On Scroll) with optimized configuration
+ * for subtle, confident, and fast animations
  */
 export const initAOS = () => {
   AOS.init({
-    // Global settings
-    duration: 800, // Animation duration in ms
-    easing: 'ease-in-out', // Default easing for animations
-    once: false, // Whether animation should happen only once
-    mirror: false, // Whether elements should animate out while scrolling past them
-    offset: 120, // Offset (in px) from the original trigger point
-    delay: 0, // Default delay before animation starts
-    anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger the animation
+    duration: 200,                 // default: fast but not blinky
+    easing: 'ease-out-cubic',
+    offset: 140,                   // trigger earlier to avoid snap-in
+    delay: 0,
+    once: true,
+    mirror: false,
+    anchorPlacement: 'top-bottom',
+    startEvent: 'DOMContentLoaded',
+    throttleDelay: 20,
+    debounceDelay: 50,
+    disable: shouldReduceMotion
   });
+
+  // Call after dynamic content/route changes
+  window.addEventListener('load', () => AOS.refreshHard());
 };
 
 /**

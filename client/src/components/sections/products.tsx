@@ -36,8 +36,8 @@ export default function ProductsSection() {
           <h2 
             className="text-3xl sm:text-4xl font-bold text-primary mb-4 section-heading" 
             data-testid="text-products-title"
-            data-aos="fade-down"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-duration="200"
           >
             <span className="shape"></span>
             Products We Source
@@ -45,9 +45,9 @@ export default function ProductsSection() {
           <p 
             className="text-lg text-secondary max-w-3xl mx-auto" 
             data-testid="text-products-description"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="800"
+            data-aos="fade"
+            data-aos-delay="60"
+            data-aos-duration="220"
           >
             From premium yarns to finished garments, we source the finest textile products from Pakistan's leading manufacturers.
           </p>
@@ -59,8 +59,8 @@ export default function ProductsSection() {
               <div 
                 className="group cursor-pointer" 
                 data-aos="fade-up"
-                data-aos-delay={`${index * 100}`}
-                data-aos-duration="800"
+                data-aos-delay={index <= 2 ? index * 40 : (index - 3) * 40}
+                data-aos-duration="220"
               >
                 <div className="bg-neutral rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
                   <img
