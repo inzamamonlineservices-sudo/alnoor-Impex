@@ -37,3 +37,17 @@ export const initAOS = () => {
 export const refreshAOS = () => {
   AOS.refresh();
 };
+
+/**
+ * Fully reset AOS so new route elements animate again
+ */
+export function refreshAOSHard() {
+  AOS.refreshHard();
+}
+
+/**
+ * Clear stale AOS classes on SSR/CSR boundaries (defensive)
+ */
+export function clearAOSClasses() {
+  document.querySelectorAll('.aos-animate').forEach(el => el.classList.remove('aos-animate'));
+}
